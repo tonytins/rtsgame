@@ -1,18 +1,15 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://sprites/structure/scifiStructure_05.png" type="Texture" id=1]
 [ext_resource path="res://tileset/tileset_env.tres" type="TileSet" id=2]
 [ext_resource path="res://tileset/tileset_path.tres" type="TileSet" id=3]
 [ext_resource path="res://scripts/CameraMovement.gd" type="Script" id=4]
 [ext_resource path="res://sprites/UI/blue_panel.png" type="Texture" id=5]
-[ext_resource path="res://sprites/unit/scifiUnit_41.png" type="Texture" id=6]
-[ext_resource path="res://scripts/unit.gd" type="Script" id=7]
-[ext_resource path="res://sprites/UI/green_tick.png" type="Texture" id=8]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 9.21202, 12.9573 )
+[ext_resource path="res://scenes/man1.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scripts/worldManager.gd" type="Script" id=9]
 
 [node name="world" type="Node2D"]
+script = ExtResource( 9 )
 
 [node name="env" type="TileMap" parent="."]
 tile_set = ExtResource( 2 )
@@ -47,6 +44,7 @@ __meta__ = {
 }
 
 [node name="NinePatchRect" type="NinePatchRect" parent="ui/base"]
+modulate = Color( 1, 1, 1, 0.552941 )
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -60,21 +58,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="unit" type="KinematicBody2D" parent="."]
-position = Vector2( 229.363, 151.801 )
-input_pickable = true
-script = ExtResource( 7 )
+[node name="unit" parent="." instance=ExtResource( 6 )]
+position = Vector2( 212.709, 207.5 )
 
-[node name="box" type="Sprite" parent="unit"]
-position = Vector2( 32, 43.3629 )
-scale = Vector2( 1.99067, 0.565625 )
-texture = ExtResource( 8 )
+[node name="unit2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 342.964, 278.031 )
 
-[node name="sprite" type="Sprite" parent="unit"]
-position = Vector2( 32, 32 )
-texture = ExtResource( 6 )
-
-[node name="shape" type="CollisionShape2D" parent="unit"]
-position = Vector2( 32, 32 )
-shape = SubResource( 1 )
-[connection signal="input_event" from="unit" to="unit" method="_on_unit_input_event"]
+[node name="unit3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 373.679, 181.904 )
