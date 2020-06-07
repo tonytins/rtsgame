@@ -58,11 +58,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="unit" parent="." instance=ExtResource( 6 )]
+[node name="Valter" parent="." instance=ExtResource( 6 )]
 position = Vector2( 212.709, 207.5 )
 
-[node name="unit2" parent="." instance=ExtResource( 6 )]
+[node name="Tonytins" parent="." instance=ExtResource( 6 )]
 position = Vector2( 342.964, 278.031 )
 
-[node name="unit3" parent="." instance=ExtResource( 6 )]
+[node name="Rico" parent="." instance=ExtResource( 6 )]
 position = Vector2( 373.679, 181.904 )
