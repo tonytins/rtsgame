@@ -29,7 +29,7 @@ func _process(delta):
 	
 	# Margin Movement
 	
-	if !Input.is_key_pressed(KEY_CONTROL):
+	if Input.is_key_pressed(KEY_CONTROL):
 		if mousepos.x < marginX:
 			position.x = lerp(position.x, position.x - abs(mousepos.x - marginX)/marginX * panSpeed * zoom.x, speed * delta)
 		elif mousepos.x > OS.window_size.x - marginX:

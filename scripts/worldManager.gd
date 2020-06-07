@@ -21,13 +21,14 @@ func create_buttons():
 	for unit in selected_units:
 		if not buttons.has(unit.name):
 			var but = button.instance()
-			but.connect_me(self, unit.name)
-			but.rect_position()
+			#but.connect_me(self, unit.name)
+			#but.rect_position()
 
 func delete_buttons():
-	for but in buttons:
-		if "UI/Base".has_node(but):
-			var b = $"UI/Base".get_node(but)
-			b.queue_free()
-			$"UI/Base".remove_child(b)
+	pass
+#	for but in buttons:
+#		if "UI/Base".has_node(but):
+#			var b = $"UI/Base".get_node(but)
+#			b.queue_free()
+#			$"UI/Base".remove_child(b)
 	buttons.clear()
