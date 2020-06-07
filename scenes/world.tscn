@@ -25,3 +25,5 @@ texture = ExtResource( 1 )
 position = Vector2( 544, 320 )
 current = true
 script = ExtResource( 4 )
+zoomspeed = 30.0
+zoommargin = 0.1

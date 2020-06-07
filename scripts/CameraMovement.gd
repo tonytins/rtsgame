@@ -28,7 +28,6 @@ func _process(delta):
 	
 	zoom.x = clamp(zoom.x, zoomMin, zoomMax)
 	zoom.y = clamp(zoom.y, zoomMin, zoomMax)
-	pass
 
 func _input(event):
 	if abs(zoompos.x - get_global_mouse_position().x) > zoommargin:
