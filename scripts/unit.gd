@@ -36,6 +36,7 @@ func _on_unit_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton:
 		if event.is_pressed():
 			if event.button_index == BUTTON_LEFT:
-				set_selected(true)
-			if event.button_index == BUTTON_RIGHT:
-				set_selected(false)
+				set_selected(not selected)
+#			if event.button_index == BUTTON_RIGHT:
+#				set_selected(false)
+			

@@ -14,7 +14,9 @@ font_data = ExtResource( 5 )
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 9.21202, 12.9573 )
 
-[node name="unit" type="KinematicBody2D"]
+[node name="unit" type="KinematicBody2D" groups=[
+"units",
+]]
 position = Vector2( 0.136993, -1.20596 )
 input_pickable = true
 script = ExtResource( 3 )
